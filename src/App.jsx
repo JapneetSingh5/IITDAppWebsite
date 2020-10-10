@@ -5,6 +5,7 @@ import {
   Route,
   Redirect,
   Switch,
+  browserHistory,
 } from 'react-router-dom';
 import { useWindowSize } from 'react-use';
 import Leaflet from 'leaflet';
@@ -136,7 +137,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <Router>
+        <Router history={browserHistory}>
           <>
             <ScrollToTop />
             <Switch>
